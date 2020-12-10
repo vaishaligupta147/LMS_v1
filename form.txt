@@ -1,0 +1,93 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <p class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-user"></span>
+      </p>
+    </div>
+
+    <!-- Login Form -->
+    <!-- <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)"> -->
+    <form name="form" #user="ngForm" (ngSubmit)="onClickSubmit1(user.value)" >
+      <!-- <input type="text" id="name" class="fadeIn second" name="name" placeholder="Enter Name" formControlName="name" required>
+        <input type="text" id="emailid" class="fadeIn third" name="emailid" placeholder="Enter Email" formControlName="emailid" required>
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Enter Password" formControlName="password" required>
+        <input type="password" id="cpassword" class="fadeIn fourth" name="psw-repeat" placeholder="Conform Password" formControlName="cpassword" required>
+        <input type="date" id="dob" class="fadeIn fourth" name="dob" placeholder="DOB" formControlName="dob">
+         -->
+
+      <input type="text" id="name" class="fadeIn second" name="name" placeholder="Enter Name" 
+      ngModel required>
+      <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger"> -->
+
+        <!-- <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div> -->
+
+      <!-- </div> -->
+      <input type="text" id="emailid" class="fadeIn third" 
+       name="emailid" placeholder="Enter Email" ngModel required>
+       
+       <!-- <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)" class="alert alert-danger">
+         <div *ngIf="emailid.errors.required">
+        Email is required.
+      </div>
+    </div> -->
+      <input type="password" id="password" class="fadeIn third" 
+       name="password" placeholder="Enter Password" ngModel required>
+
+        <!-- <div *ngIf="password.submitted && password.invalid" class="invalid-feedback">
+          <div *ngIf="password.errors.required">password is required</div>
+      </div> -->
+
+      <input type="password" id="cpassword" class="fadeIn fourth" 
+       name="psw-repeat" placeholder="Conform Password"
+        ngModel required minlength="8">
+
+
+      <select name="country" class="fadeIn fourth" id="country" ngModel required>
+        <option selected="" value=""></option>
+        <option [ngValue]="c.name" *ngFor="let c of countryList">
+          {{c.name}}
+        </option>
+      </select>
+
+      <input type="date" id="dob" class="fadeIn fourth" name="dob" placeholder="DOB" ngModel required>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <!-- <input type="submit" class="fadeIn fourth" value="Log In"> -->
+      <!-- <button [ngClass]="{enable: isPageLoaded===true}" type="submit" -->
+      <!-- [disabled]="!user.form.valid" class="fadeIn fourth registerbtn">Register</button> -->
+      <button type="submit"  class="enable fadeIn fourth registerbtn">Register</button>
+
+      <button type="submit" class=" fadeIn fourth registerbtn" (click)="reset()">Reset</button>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <p>Already have an account? <a href="#">Sign in</a>.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<div>
+  <!-- <table  id="myTable">
+    <tr class="header" >
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let usr of user">
+      <td>{{usr.name}}</td>
+      <td>{{usr.dob}}</td>
+      <td>{{usr.emailid}}</td>
+    </tr>
+  </table> -->
+</div>

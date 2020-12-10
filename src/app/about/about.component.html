@@ -1,0 +1,32 @@
+<p>about works!</p>
+
+<div>
+  <app-container></app-container>
+</div>
+
+<hr>
+<p>switch example</p>
+<div [ngSwitch]="value">
+  <span *ngSwitchCase="1">1</span>
+  <span *ngSwitchCase="4">4</span>
+  <span *ngSwitchCase="5">5</span>
+  <span *ngSwitchDefault>defalut</span>
+
+</div>
+<hr>
+<div>
+  <p>if else example</p>
+  <p *ngIf="!isPageLoaded else PageLoadText">wait untill all the component loads!!</p>
+  <ng-template #PageLoadText>
+    <p>Page Loaded Successfully..</p>
+  </ng-template>
+  <h5>Page Loaded -> {{isPageLoaded}}</h5>
+</div>
+<hr>
+<p [ngClass]="{enable: isPageLoaded===true}">ngClass example</p>
+<hr>
+<!--create user : <button [disabled]="!isPageLoaded" (click)="onHandleClick()" [ngStyle]="backgroundColor:red">-->
+ngStyle Example : <button [ngStyle]="{color:getColor()}">Submit</button>
+<hr>
+<p coloringDirective>here we go with custome directive</p>
+<p appColoringAlt>Custome Directive with the renderer</p>

@@ -1,0 +1,87 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "userName": "abc@gmail.com",
+      "password": "zxcvbnm123",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "userData": [
+    {
+      "name": "Vaishali Gupta",
+      "userName": "abc@gmail.com",
+      "password": "zxcvbnm123",
+      "cpassword": "zxcvbnm123",
+      "role": "Librarian",
+      "id": 1
+    },
+    {
+      "name": "Vaishali Gupta",
+      "userName": "abc@gmail.com",
+      "password": "zxcvbnm1234",
+      "cpassword": "zxcvbnm1234",
+      "role": "library member",
+      "bookId": 0,
+      "id": 2
+    },
+    {
+      "name": "Vaishali Gupta",
+      "emailid": "abc@gmail.com",
+      "password": "mnbvcxz123",
+      "cpassword": "mnbvcxz123",
+      "role": "library member",
+      "bookId": 0,
+      "id": 3
+    },
+    {
+      "name": "Vaishali Gupta",
+      "emailid": "abc@gmail.com",
+      "password": "asdfghjkl123",
+      "cpassword": "asdfghjkl123",
+      "role": "library member",
+      "bookId": 0,
+      "id": 4
+    }
+  ],
+  "book": [
+    {
+      "id": 1,
+      "title": "Beyond Religion: Ethics for a Whole World",
+      "author": "Dalai Lama",
+      "noOfCopies": 0,
+      "location": "Rack No 2",
+      "inStock": false
+    },
+    {
+      "id": 2,
+      "title": "I Witness: Partial Observations",
+      "author": "Kapil Sibal",
+      "noOfCopies": 5,
+      "location": "Rack No 2",
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "title": "One Life is Not Enough",
+      "author": "Natwar Singh",
+      "noOfCopies": 0,
+      "inStock": false,
+      "location": "Rack No 2"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

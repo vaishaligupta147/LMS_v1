@@ -1,0 +1,55 @@
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <p  class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-user"></span>  
+        </p>
+      </div>
+  
+      <!-- Login Form -->
+      <form name="form" #user="ngForm" (ngSubmit)="user.form.valid && onSubmit(user.value)" novalidate>
+        <input type="text" id="emailid" class="fadeIn third" name="emailid" placeholder="Enter Email" #email="ngModel"
+        [ngClass]="{ 'is-invalid': user.submitted && email.invalid }" ngModel pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+      <div *ngIf="user.submitted && email.invalid" class="invalid-feedback">
+        <div *ngIf="email.errors.required">Email is required</div>
+        <div *ngIf="email.errors.pattern">Email must be a valid email address</div>
+      </div>
+
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Enter Password" ngModel
+      #password="ngModel" [ngClass]="{ 'is-invalid': user.submitted && password.invalid }" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" minlength="8">
+      <div *ngIf="user.submitted && password.invalid" class="invalid-feedback">
+        <div *ngIf="password.errors.required">Passowrd is required</div>
+        <div *ngIf="password.errors.minlength">Password must be at least 8 characters</div>
+        <div *ngIf="password.errors.pattern"> Password must have at least one letter and one number:</div>
+      </div>
+        <!-- <input type="text" id="login" class="fadeIn second" name="email" placeholder="email" required> -->
+      
+        <!-- <input type="text" id="login" class="fadeIn third" name="psw" placeholder="password" required> -->
+        <!-- <input type="submit" [ngClass]="{enable: isPageLoaded===true}" routerLink="/home"  class="fadeIn fourth" value="Log In"> -->
+        <input type="submit" class="fadeIn fourth" value="Login">
+        <div *ngIf="message" Class="alert alert-danger">Username or password is incorrect &nbsp;
+          <button type="reset" >Reset</button>
+        </div>
+        
+      </form>
+  
+      <!-- Remind Passowrd -->
+      
+      <div id="formFooter">
+        
+        <a class="underlineHover" href="#">Forgot Password?</a>
+        <div class="container signin">
+          <p>Create Account! <a routerLink="/registration" >Sign up</a>.</p>
+        </div>
+      
+      </div>
+  
+    </div>
+  </div>
+
+
+  

@@ -1,0 +1,10 @@
+<div>Counter {{no}} {{value}}
+
+    <input type="text" (change)="onHandleChange($event)" [(ngModel)]="strTextBox" />
+    <button [disabled]="isEnabled" (click)="onHandleClick('Welcome')">AddMe</button></div>
+
+{{strTextBox}}
+
+<p> Exploring the @Input Directive {{userName}}</p>
+
+<hr />

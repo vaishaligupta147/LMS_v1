@@ -1,0 +1,21 @@
+<p>Products List!!!!</p>
+<div>
+    <form>
+        <div>
+            <label>Product Information</label>
+            <input type="text" name="productInfo" #productInfo />
+        </div>
+        <div>
+            <label>Quantity</label>
+            <input type="text" name="Quantity" [(ngModel)]="quantity" />
+        </div>
+        <div>
+            <label>Sale Price</label>
+            <input type="text" name="SalePrice" [(ngModel)]="salePrice" />
+        </div>
+        <div>
+            <button type="button">Add to Cart</button>
+        </div>
+    </form>
+    <app-cart-list (ParentFunctionPassed)="onParentCalled()"></app-cart-list>
+</div>
