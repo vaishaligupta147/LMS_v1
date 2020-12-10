@@ -20,15 +20,7 @@ const routes: Routes = [
 // ]
 
   },
-  {
-    path: 'contactus', component: ContactusComponent
-    // ,
-    // children: [
-    //   { path: ':email', component: ContactusComponent },
-    //   { path: ':name', component: ContactusComponent }
-    // ]
-  },
-  { path: 'contactus/:email/:name', component: ContactusComponent},
+  
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent }
 ];
